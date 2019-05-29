@@ -6,6 +6,7 @@ public class Product {
 	private String sku;
 	private String vendorName;
 	private double price;
+	private int discountPercentage = 0;
 	
 	public Product(){
 		name = "xxx";
@@ -17,6 +18,19 @@ public class Product {
 		this.price = price;
 	}
 	
+	public Product(String name,int pct){
+		this.name = name;
+		this.discountPercentage = pct;
+	}
+	
+	public int getDiscountPercentage() {
+		return discountPercentage;
+	}
+
+	public void setDiscountPercentage(int discountPercentage) {
+		this.discountPercentage = discountPercentage;
+	}
+
 	public double getPrice() {
 		return price;
 	}
@@ -50,7 +64,7 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", sku=" + sku + ", vendorName=" + vendorName + ", price="
-				+ price + "]";
+				+ price + ", discountPercentage=" + discountPercentage + "]";
 	}
 	
 	
