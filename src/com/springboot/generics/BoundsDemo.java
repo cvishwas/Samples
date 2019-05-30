@@ -12,10 +12,15 @@ class BoundsDemo {
 		System.out.println("dob average is " + w);
 		// This won't compile because String is not a
 		// subclass of Number.
-		 String strs[] = { "1", "2", "3", "4", "5" };
-		 Stats<String> strob = new Stats<String>(strs);
+		// String strs[] = { "1", "2", "3", "4", "5" };
+		// Stats<String> strob = new Stats<String>(strs);
 		// double x = strob.average();
 		// System.out.println("strob average is " + v);
+		
+		if(iob.sameAvg(dob))
+			System.out.println("Averages are same");
+		else
+			System.out.println("Averages are not same");
 	}
 
 }
