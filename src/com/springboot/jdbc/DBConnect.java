@@ -26,7 +26,7 @@ public class DBConnect {
 			ps.setString(1, "1000");
 			ps.executeQuery();
 			ps.executeUpdate();
-			st.executeUpdate("");
+			st.executeUpdate("insert into employee(empid,empname) values(empseq.nextval,?)");
 		} catch(SQLException ex) {
 			ex.printStackTrace();
 		}catch (ClassNotFoundException e) {
